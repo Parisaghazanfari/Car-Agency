@@ -11,7 +11,7 @@ public class Test {
     public static void main(String[] args) {
         Menu menu=new Menu();
         CarOperation carOperation=new CarOperation();
-        System.out.println("Welcome to our Agency");
+        System.out.println("\nWelcome to our Agency\n");
         carOperation.addCar();
         Scanner scanner=new Scanner(System.in);
         menu.menuBar();
@@ -21,7 +21,7 @@ public class Test {
             switch (operation) {
                 case 1:
                     carOperation.printCars();
-                    System.out.println("\nWhich car do you want?\n" + "Please import id:");
+                    System.out.println("\nWhich car do you want?\n" + "Please import car's ID:");
                     int id = scanner.nextInt();
                     while(id!=0) {
                         carOperation.rentCar(id);

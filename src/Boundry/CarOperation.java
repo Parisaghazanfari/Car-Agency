@@ -27,17 +27,6 @@ public class CarOperation {
         cars.add(carInformation);
         rentalCar.remove(carInformation);
     }
-
-    public void checkInventory() {
-        for (CarInformation carInformation : cars
-        ) {
-            if (cars.equals(carInformation)) {
-                System.out.println("You can rent");
-            } else
-                System.out.println("You can't rent");
-        }
-    }
-
     public void printCars() {
         for (CarInformation carinformation : cars
         ) {
