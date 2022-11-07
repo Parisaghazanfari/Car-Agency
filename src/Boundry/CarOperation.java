@@ -27,18 +27,20 @@ public class CarOperation {
         cars.add(carInformation);
         rentalCar.remove(carInformation);
     }
-    public void printCars() {
+    public CarInformation printCars() {
         for (CarInformation carinformation : cars
         ) {
             System.out.println(carinformation);
         }
+        return null;
     }
 
-    public void printRentalCar() {
+    public CarInformation printRentalCar() {
         for (CarInformation carInformation : rentalCar
         ) {
             System.out.println(carInformation);
         }
+        return null;
     }
 
     public void rentCar(int id) {
@@ -47,7 +49,7 @@ public class CarOperation {
 
     }
 
-    public void carReverse(int id) {
+    public void reverseCar(int id) {
         CarInformation carInfo = findCarForReverse(id);
         System.out.println(carInfo);
         reverseCar(carInfo);
@@ -71,11 +73,14 @@ public class CarOperation {
     public CarInformation findCarForReverse(int id) {
         for (CarInformation carInformation : rentalCar
         ) {
-            if (carInformation.getId() == id) {
+            if (carInformation.getId() == id){
+                System.out.println("YOur car is:");
                 System.out.println(carInformation);
+                System.out.println("Car was successfully reversed\n\n");
+                return carInformation;
             }
-            return carInformation;
         }
+        System.out.println("Car is not exist");
         return null;
     }
 

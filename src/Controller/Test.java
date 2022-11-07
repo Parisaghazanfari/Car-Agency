@@ -11,6 +11,7 @@ public class Test {
     public static void main(String[] args) {
         Menu menu=new Menu();
         CarOperation carOperation=new CarOperation();
+        CarInformation carInformation=new CarInformation();
         System.out.println("\nWelcome to our Agency\n");
         carOperation.addCar();
         Scanner scanner=new Scanner(System.in);
@@ -21,7 +22,7 @@ public class Test {
             switch (operation) {
                 case 1:
                     carOperation.printCars();
-                    System.out.println("\nWhich car do you want?\n" + "Please import car's ID:");
+                    System.out.println("\nWhich car do you want to rent?\n" + "Please import car's ID:");
                     int id = scanner.nextInt();
                     while(id!=0) {
                         carOperation.rentCar(id);
@@ -32,6 +33,26 @@ public class Test {
                     operation = scanner.nextInt();
                     break;
                 case 2:
+                    carOperation.printRentalCar();
+                    System.out.println("\nWhich car do you want to reverse?\n" + "Please import car's ID:");
+                    int id1 = scanner.nextInt();
+                    while(id1!=0) {
+                        carOperation.reverseCar(id1);
+                        System.out.println("Import 0 to continue:");
+                        id1=scanner.nextInt();
+                    }
+                    menu.menuBar();
+                    operation = scanner.nextInt();
+                    break;
+                case 3:
+                    carOperation.printCars();
+                    menu.menuBar();
+                    operation = scanner.nextInt();
+                    break;
+                case 4:
+                    carOperation.printRentalCar();
+                    menu.menuBar();
+                    operation = scanner.nextInt();
                     break;
             }
         }
