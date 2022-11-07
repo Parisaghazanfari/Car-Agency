@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class CarOperation {
     ArrayList<CarInformation> cars = new ArrayList<>();
     ArrayList<CarInformation> rentalCar = new ArrayList<>();
-    CarInformation carInformation = new CarInformation();
     CarInformation carInformation1 = new CarInformation(1, "BMW", "10", "100");
     CarInformation carInformation2 = new CarInformation(2, "Mercedes Benz", "20", "200");
     CarInformation carInformation3 = new CarInformation(3, "Porsche", "10", "300");

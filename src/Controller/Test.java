@@ -1,7 +1,9 @@
 package Controller;
 
 import Boundry.CarOperation;
+import Boundry.GetCustomInfo;
 import Entity.CarInformation;
+import Entity.CustomerInformation;
 import Entity.Menu;
 
 import java.util.ArrayList;
@@ -11,9 +13,10 @@ public class Test {
     public static void main(String[] args) {
         Menu menu=new Menu();
         CarOperation carOperation=new CarOperation();
-        CarInformation carInformation=new CarInformation();
+        GetCustomInfo getCustomInfo=new GetCustomInfo();
         System.out.println("\nWelcome to our Agency\n");
         carOperation.addCar();
+        getCustomInfo.getCustomInfo();
         Scanner scanner=new Scanner(System.in);
         menu.menuBar();
         int operation=scanner.nextInt();
